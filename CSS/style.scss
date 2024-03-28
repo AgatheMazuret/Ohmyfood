@@ -27,10 +27,6 @@ body {
     padding: 0;
 }
 
-h1 {
-    margin-left: 20px;
-}
-
 hr {
     display: block;
     margin-bottom: 15px;
@@ -60,8 +56,10 @@ hr {
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
+    color: black
 }
+
 
 /****** Welcome Page *******/
 
@@ -138,7 +136,9 @@ a {
     @media (min-width: 768px) {
         flex-direction: row;
         gap: 2%;
-        padding-bottom: 40px;
+        padding: 40px 0 40px 0;
+        align-items: center;
+        justify-content: center;
     }
 
     .functioning__title {
@@ -165,7 +165,6 @@ a {
         border-radius: 30px;
         background-color: #F6F6F6;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        margin-bottom: 25px;
 
         p {
             width: 100%;
@@ -189,19 +188,37 @@ a {
 
 .restaurants__cards {
     background-color: #F6F6F6;
-    @include flex-center;
-    flex-direction: column;
+    padding-top: 10px;
 
-    @media (min-width: 1024px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 5%;
+    .card__grid {
+        display: grid;
+        justify-content: center;
+
+
+        @media (min-width: 1024px) {
+            display: grid;
+            grid-template-columns: 490px 490px; // Deux colonnes de largeur égale
+            gap: 70px; // Espacement entre les colonnes
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            @media (min-width: 1024px) {
+                background-color: #F6F6F6;
+            }
+        }
     }
 
-    h1 {
-        @media (min-width: 768px) {
-            width: 73%;
-        }
+    // Styles spécifiques à chaque colonne
+    #palette,
+    #francaise {
+        grid-column: 1; // Première colonne
+    }
+
+    #enchantee,
+    #sens {
+        grid-column: 2; // Deuxième colonne
     }
 
     .card {
@@ -228,6 +245,7 @@ a {
                 position: absolute;
                 top: 10px;
                 right: 10px;
+                border-radius: 3px;
                 border: #99E2D0 1px solid;
                 background-color: #99E2D0;
                 color: #008766;
@@ -253,18 +271,21 @@ a {
             justify-content: space-between;
 
             .card__txt {
+                margin: 8px 0 0 20px;
+
                 h2 {
                     font-size: 18px;
-                    margin: 10px;
+                    margin: 0;
                 }
 
                 p {
-                    margin: 10px;
+                    margin-top: 5px;
                 }
             }
 
             .card__fav {
-                padding-right: 35px;
+                padding-right: 40px;
+                margin-top: 25px;
                 position: relative;
 
                 .fa-regular,
