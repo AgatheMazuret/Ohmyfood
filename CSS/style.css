@@ -32,11 +32,13 @@ hr {
   padding: 15px;
   border-radius: 25px;
   color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: 200ms;
 }
 .btn button:hover {
   background-color: rgb(167, 106, 230);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.05);
 }
 
 a {
@@ -65,11 +67,17 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 105%;
-  height: 50%;
+  width: 100%;
+  height: 50px;
   background-color: #EAEAEA;
   box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.5), 0 5px 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 8px;
+}
+@media (min-width: 1024px) {
+  .location {
+    box-shadow: none;
+    margin-bottom: 0;
+  }
 }
 .location i {
   margin-right: 10px;
@@ -78,6 +86,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 40px;
+}
+.location #localisation {
+  color: #353535;
+  padding-left: 15px;
 }
 .location input {
   border: none;
@@ -96,7 +109,7 @@ a {
 /****** 1ère section *******/
 .txt__btn {
   background-color: #F6F6F6;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 .txt__btn .txt {
   display: flex;
@@ -106,25 +119,44 @@ a {
   flex-direction: column;
   padding-bottom: 30px;
 }
-@media (min-width: 768px) {
-  .txt__btn .txt p br {
-    display: none;
+.txt__btn .txt h2 {
+  font-size: 34px;
+}
+@media (min-width: 1024px) {
+  .txt__btn .txt h2 {
+    font-size: 40px;
+    margin-bottom: 0;
   }
+}
+.txt__btn .txt p {
+  color: #353535;
+  font-size: 18px;
+}
+.txt__btn .txt p br {
+  display: none;
 }
 
 /****** 2ème section *******/
+.functioning__txt {
+  width: 100%;
+  max-width: 1053px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+}
+
 .functioning__cards {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-top: 35px;
+  padding-top: 15px;
 }
 @media (min-width: 768px) {
   .functioning__cards {
     gap: 2%;
-    padding: 40px 0 40px 0;
+    padding-bottom: 50px;
     align-items: center;
     justify-content: center;
   }
@@ -145,17 +177,17 @@ a {
   color: white;
   padding: 5px 9px 5px 9px;
   border-radius: 100%;
-  margin-left: -30px;
-  margin-top: 10px;
+  margin-left: -16px;
+  margin-top: 20px;
 }
 .functioning__cards .card {
   display: flex;
   width: 322px;
+  height: 72px;
   border: 1px solid #F6F6F6;
-  padding: 15px;
-  border-radius: 30px;
+  border-radius: 20px;
   background-color: #F6F6F6;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   margin-bottom: 25px;
 }
 @media (min-width: 1025px) {
@@ -166,6 +198,7 @@ a {
 .functioning__cards .card p {
   width: 100%;
   display: flex;
+  align-items: center;
 }
 .functioning__cards .card p i {
   display: flex;
@@ -180,9 +213,17 @@ a {
 }
 
 /****** 3ème section les restaurants *******/
+.restaurant {
+  width: 100%;
+  max-width: 1053px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .restaurants__cards {
   background-color: #F6F6F6;
   padding-top: 10px;
+  padding-bottom: 30px;
 }
 .restaurants__cards .card__grid {
   display: grid;
@@ -192,7 +233,7 @@ a {
   .restaurants__cards .card__grid {
     display: grid;
     grid-template-columns: 490px 490px;
-    gap: 5%;
+    gap: 6%;
     justify-content: center;
     padding-bottom: 20px;
   }
@@ -217,7 +258,6 @@ a {
   width: 340px;
   height: 251px;
   border-radius: 15px;
-  margin-bottom: 18px;
 }
 .restaurants__cards .card:hover {
   transform: scale(1.05);
@@ -298,8 +338,7 @@ a {
 footer {
   background-color: #353535;
   color: white;
-  padding-top: 15px;
-  padding-bottom: 20px;
+  padding-top: 34px;
 }
 @media (min-width: 768px) {
   footer .foot {
@@ -315,8 +354,9 @@ footer .foot .foot__title h2 {
   font-weight: 400;
   font-size: 18px;
   color: white;
-  margin-left: 80px;
+  margin-left: 60px;
   margin-right: 20px;
+  padding-top: 20px;
 }
 @media (min-width: 768px) {
   footer .foot .foot__txt {
@@ -327,6 +367,7 @@ footer .foot .foot__title h2 {
   footer .foot .foot__txt {
     justify-content: flex-end;
     width: 100%;
+    padding-top: 20px;
   }
 }
 footer .foot i {
@@ -334,6 +375,8 @@ footer .foot i {
 }
 footer .foot p {
   margin-left: 22px;
+  margin-bottom: 0;
+  font-size: 16px;
 }
 
 /****** Menus pages *******/
@@ -439,7 +482,6 @@ footer .foot p {
 .food .card {
   width: 349px;
   height: 72px;
-  border: #F6F6F6 1px solid;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 22px;
@@ -483,7 +525,7 @@ footer .foot p {
 }
 .food .card:hover .check {
   width: 60px;
-  height: 75px;
+  height: 72px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #99E2D0;
