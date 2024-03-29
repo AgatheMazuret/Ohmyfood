@@ -60,6 +60,9 @@ a {
     color: black
 }
 
+.fa-heart::before {
+    font-size: 22px;
+}
 
 /****** Welcome Page *******/
 
@@ -134,11 +137,14 @@ a {
     padding-top: 35px;
 
     @media (min-width: 768px) {
-        flex-direction: row;
         gap: 2%;
         padding: 40px 0 40px 0;
         align-items: center;
         justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: row;
     }
 
     .functioning__title {
@@ -165,6 +171,11 @@ a {
         border-radius: 30px;
         background-color: #F6F6F6;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        margin-bottom: 25px;
+
+        @media (min-width: 1025px) {
+            margin-bottom: 0;
+        }
 
         p {
             width: 100%;
@@ -198,7 +209,7 @@ a {
         @media (min-width: 1024px) {
             display: grid;
             grid-template-columns: 490px 490px; // Deux colonnes de largeur égale
-            gap: 70px; // Espacement entre les colonnes
+            gap: 5%; // Espacement entre les colonnes
             justify-content: center;
             padding-bottom: 20px;
         }
@@ -285,7 +296,7 @@ a {
 
             .card__fav {
                 padding-right: 40px;
-                margin-top: 25px;
+                margin-top: 20px;
                 position: relative;
 
                 .fa-regular,
@@ -351,6 +362,11 @@ footer {
         .foot__txt {
             @media (min-width: 768px) {
                 display: flex;
+            }
+
+            @media (min-width: 1024px) {
+                justify-content: flex-end;
+                width: 100%;
             }
         }
 
@@ -479,9 +495,9 @@ footer {
 
         .card__content {
             display: flex;
-            justify-content: space-between;
 
             .card__txt {
+                width: 80%;
                 margin-left: 15px;
                 white-space: nowrap;
                 overflow: hidden;
@@ -520,7 +536,6 @@ footer {
         }
 
         &:hover .check {
-            display: block;
             width: 60px;
             height: 75px;
             border-top-right-radius: 15px;
@@ -535,8 +550,8 @@ footer {
 
         .card__price {
             display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
+            align-items: center;
+            margin-right: 10px;
         }
     }
 }

@@ -44,6 +44,10 @@ a {
   color: black;
 }
 
+.fa-heart::before {
+  font-size: 22px;
+}
+
 /****** Welcome Page *******/
 /****** Header *******/
 .logo {
@@ -119,11 +123,15 @@ a {
 }
 @media (min-width: 768px) {
   .functioning__cards {
-    flex-direction: row;
     gap: 2%;
     padding: 40px 0 40px 0;
     align-items: center;
     justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .functioning__cards {
+    flex-direction: row;
   }
 }
 .functioning__cards .functioning__title {
@@ -148,6 +156,12 @@ a {
   border-radius: 30px;
   background-color: #F6F6F6;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 25px;
+}
+@media (min-width: 1025px) {
+  .functioning__cards .card {
+    margin-bottom: 0;
+  }
 }
 .functioning__cards .card p {
   width: 100%;
@@ -178,7 +192,7 @@ a {
   .restaurants__cards .card__grid {
     display: grid;
     grid-template-columns: 490px 490px;
-    gap: 70px;
+    gap: 5%;
     justify-content: center;
     padding-bottom: 20px;
   }
@@ -255,7 +269,7 @@ a {
 }
 .restaurants__cards .card .card__content .card__fav {
   padding-right: 40px;
-  margin-top: 25px;
+  margin-top: 20px;
   position: relative;
 }
 .restaurants__cards .card .card__content .card__fav .fa-regular,
@@ -307,6 +321,12 @@ footer .foot .foot__title h2 {
 @media (min-width: 768px) {
   footer .foot .foot__txt {
     display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  footer .foot .foot__txt {
+    justify-content: flex-end;
+    width: 100%;
   }
 }
 footer .foot i {
@@ -428,9 +448,9 @@ footer .foot p {
 }
 .food .card .card__content {
   display: flex;
-  justify-content: space-between;
 }
 .food .card .card__content .card__txt {
+  width: 80%;
   margin-left: 15px;
   white-space: nowrap;
   overflow: hidden;
@@ -462,7 +482,6 @@ footer .foot p {
   display: none;
 }
 .food .card:hover .check {
-  display: block;
   width: 60px;
   height: 75px;
   border-top-right-radius: 15px;
@@ -477,6 +496,6 @@ footer .foot p {
 }
 .food .card .card__price {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */
