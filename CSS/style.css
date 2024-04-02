@@ -32,18 +32,18 @@ hr {
 }
 .btn button {
   border: #9747FF 1px solid;
-  background: rgb(147, 86, 220);
   background: linear-gradient(0deg, rgb(147, 86, 220) 30%, rgb(255, 121, 218) 82%);
   padding: 15px;
   border-radius: 25px;
   color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: 200ms;
+  cursor: pointer;
 }
 .btn button:hover {
   background-color: rgb(167, 106, 230);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  filter: brightness(1.05);
+  filter: brightness(1.15);
 }
 
 a {
@@ -53,6 +53,7 @@ a {
 
 .fa-heart::before {
   font-size: 22px;
+  cursor: pointer;
 }
 
 /****** Welcome Page *******/
@@ -503,6 +504,7 @@ footer .foot p {
   margin-bottom: 22px;
   border-radius: 15px;
   position: relative;
+  cursor: pointer;
 }
 @media (min-width: 1024px) {
   .food .card {
@@ -514,7 +516,7 @@ footer .foot p {
   max-width: 634px;
 }
 .food .card .card__content .card__txt {
-  width: 80%;
+  width: 90%;
   margin-left: 15px;
   white-space: nowrap;
   overflow: hidden;
@@ -544,6 +546,7 @@ footer .foot p {
   background-color: white;
   padding: 5px;
   display: none;
+  transition: 50ms;
 }
 .food .card:hover .check {
   width: 69px;

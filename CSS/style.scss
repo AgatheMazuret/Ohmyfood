@@ -44,18 +44,18 @@ hr {
 
     button {
         border: #9747FF 1px solid;
-        background: rgb(147, 86, 220);
         background: linear-gradient(0deg, rgba(147, 86, 220, 1) 30%, rgba(255, 121, 218, 1) 82%);
         padding: 15px;
         border-radius: 25px;
         color: #ffffff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         transition: 200ms;
+        cursor: pointer;
 
         &:hover {
             background-color: rgb(167, 106, 230);
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); // Ombre plus foncée au survol
-            filter: brightness(1.05);
+            filter: brightness(1.15);
         }
     }
 }
@@ -67,6 +67,7 @@ a {
 
 .fa-heart::before {
     font-size: 22px;
+    cursor: pointer;
 }
 
 /****** Welcome Page *******/
@@ -544,6 +545,7 @@ footer {
         margin-bottom: 22px;
         border-radius: 15px;
         position: relative;
+        cursor: pointer;
 
         @media (min-width: 1024px) {
             width: 634px;
@@ -554,7 +556,7 @@ footer {
             max-width: 634px;
 
             .card__txt {
-                width: 80%;
+                width: 90%;
                 margin-left: 15px;
                 white-space: nowrap;
                 overflow: hidden;
@@ -589,6 +591,7 @@ footer {
                 background-color: white;
                 padding: 5px;
                 display: none;
+                transition: 50ms;
             }
         }
 
