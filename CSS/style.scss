@@ -40,10 +40,10 @@ hr {
 
 .btn {
     @include flex-center;
-    margin-top: 30px;
+    margin-top: 10px;
 
     button {
-        border: #9747FF 1px solid;
+        border: #9747FF 0 solid;
         background: linear-gradient(0deg, rgba(147, 86, 220, 1) 30%, rgba(255, 121, 218, 1) 82%);
         padding: 15px;
         border-radius: 25px;
@@ -133,7 +133,6 @@ a {
         @include flex-center;
         text-align: center;
         flex-direction: column;
-        padding-bottom: 30px;
 
         h2 {
             font-size: 34px;
@@ -162,6 +161,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     padding-top: 30px;
+    padding-left: 15px;
 }
 
 .functioning__cards {
@@ -238,6 +238,7 @@ a {
     max-width: 1053px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
 }
 
 .restaurants__cards {
@@ -282,6 +283,7 @@ a {
         width: 340px;
         height: 251px;
         border-radius: 15px;
+        transition: 80ms;
 
         &:hover {
             transform: scale(1.05); // Zoom au survol
@@ -378,7 +380,7 @@ a {
 footer {
     background-color: #353535;
     color: white;
-    padding-top: 34px;
+    padding-top: 14px;
 
     .foot {
         @media (min-width: 768px) {
@@ -527,6 +529,7 @@ footer {
     max-width: 349px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
     @media (min-width: 1024px) {
         max-width: 634px;
     }
@@ -616,4 +619,8 @@ footer {
             margin-top: 25px;
         }
     }
+}
+
+.commander {
+    padding: 35px;
 }
