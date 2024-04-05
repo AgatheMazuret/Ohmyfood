@@ -45,19 +45,20 @@ hr {
     button {
         border: #9747FF 0 solid;
         background: linear-gradient(0deg, rgba(147, 86, 220, 1) 30%, rgba(255, 121, 218, 1) 82%);
-        padding: 15px;
+        padding: 15px 49px 15px 49px;
         border-radius: 25px;
         color: #ffffff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        transition: 200ms;
+        
         cursor: pointer;
 
         &:hover {
             background-color: rgb(167, 106, 230);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); // Ombre plus foncée au survol
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
             filter: brightness(1.15);
+            transition: 400ms;
         }
-    }
+    }    
 }
 
 a {
@@ -283,11 +284,12 @@ a {
         width: 340px;
         height: 251px;
         border-radius: 15px;
-        transition: 80ms;
+        
 
         &:hover {
             transform: scale(1.05); // Zoom au survol
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); // Ombre au survol
+            transition: 500ms;
         }
 
         @media (min-width: 768px) {
@@ -594,7 +596,7 @@ footer {
                 background-color: white;
                 padding: 5px;
                 display: none;
-                transition: 50ms;
+                
             }
         }
 
@@ -605,6 +607,7 @@ footer {
             border-bottom-right-radius: 15px;
             background-color: #99E2D0;
             @include flex-center;
+            transition: 50ms;
 
             i {
                 display: block;
