@@ -239,10 +239,16 @@ a {
 @media (min-width: 1024px) {
   .restaurants__cards .card__grid {
     display: grid;
-    grid-template-columns: 490px 490px;
-    gap: 5%;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
     justify-content: center;
     padding-bottom: 20px;
+  }
+  .restaurants__cards .card__grid .card__grid > :first-child {
+    justify-items: end;
+  }
+  .restaurants__cards .card__grid .card__grid > :last-child {
+    justify-items: start;
   }
 }
 @media (min-width: 1024px) {
