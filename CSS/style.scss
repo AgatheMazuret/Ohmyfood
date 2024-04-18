@@ -58,7 +58,7 @@ hr {
             background-color: rgb(167, 106, 230);
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
             filter: brightness(1.15);
-            
+
         }
     }
 }
@@ -158,10 +158,57 @@ a {
     }
 }
 
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fond semi-transparent pour le fond */
+    z-index: 999;
+    /* Assure que le loader est au-dessus de tout autre contenu */
+    animation: hideLoader 0s linear 3s forwards;
+    /* Animation pour cacher le loader après 3 secondes */
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    /* couleur de la bordure */
+    border-top: 8px solid #9747FF;
+    /* couleur de la bordure supérieure */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    /* animation de rotation */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes hideLoader {
+    to {
+        display: none;
+    }
+
+    /* Cacher le loader à la fin de l'animation */
+}
+
 /****** 2ème section *******/
- #functioning {
+#functioning {
     padding: 0 1rem;
- }
+}
 
 .functioning__txt {
     width: 100%;
@@ -303,7 +350,7 @@ a {
         &:hover {
             transform: scale(1.05); // Zoom au survol
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); // Ombre au survol
-            
+
         }
 
         @media (min-width: 768px) {
@@ -311,23 +358,23 @@ a {
         }
 
         .btn__new {
-                position: absolute;
-                width: 80px;
-                height: 29px;
-                top: 10px;
-                left: 420px;
-                text-align: center;
-                border-radius: 3px;
-                border: #99E2D0 1px solid;
-                background-color: #99E2D0;
-                color: #008766;
-                z-index: 1;
+            position: absolute;
+            width: 80px;
+            height: 29px;
+            top: 10px;
+            left: 420px;
+            text-align: center;
+            border-radius: 3px;
+            border: #99E2D0 1px solid;
+            background-color: #99E2D0;
+            color: #008766;
+            z-index: 1;
 
-                p {
-                    align-items: center;
-                    margin-top: 5px;
-                    margin-bottom: 0;
-                }
+            p {
+                align-items: center;
+                margin-top: 5px;
+                margin-bottom: 0;
+            }
         }
 
         img {
@@ -361,8 +408,9 @@ a {
                 /* Ajoute un espace de 40 pixels à droite et 20 pixels en haut */
                 padding-right: 40px;
                 margin-top: 20px;
-                position: relative; /* Positionne cet élément relativement par rapport à son conteneur parent */
-            
+                position: relative;
+                /* Positionne cet élément relativement par rapport à son conteneur parent */
+
                 /* Positionne les icônes font-awesome de manière absolue dans l'élément .card__fav */
                 .fa-regular,
                 .fa-solid {
@@ -370,32 +418,38 @@ a {
                     top: 0;
                     left: 0;
                 }
-            
+
                 .fa-regular {
-                    color: black; /* Couleur de l'icône noire */
-                    transition: transform 1s; /* Ajoute une transition de 1 seconde à la transformation */
+                    color: black;
+                    /* Couleur de l'icône noire */
+                    transition: transform 1s;
+                    /* Ajoute une transition de 1 seconde à la transformation */
                 }
-            
+
                 .fa-solid {
-                    opacity: 0; /* Rend l'icône solide transparente au départ */
-                    transition: opacity 1s; /* Ajoute une transition de 1 seconde à l'opacité */
+                    opacity: 0;
+                    /* Rend l'icône solide transparente au départ */
+                    transition: opacity 1s;
+                    /* Ajoute une transition de 1 seconde à l'opacité */
                 }
-            
+
                 /* Lorsque survolé */
                 &:hover {
+
                     /* Cache l'icône régulière en la réduisant à l'échelle 0 */
                     .fa-regular {
                         transform: scale(0);
                     }
-            
+
                     /* Affiche l'icône solide en augmentant son opacité à 1 et change sa couleur */
                     .fa-solid {
                         opacity: 1;
-                        color: rgb(147, 86, 220); /* Change la couleur de l'icône solide en violet */
+                        color: rgb(147, 86, 220);
+                        /* Change la couleur de l'icône solide en violet */
                     }
                 }
             }
-            
+
         }
     }
 }
@@ -633,7 +687,7 @@ footer {
             border-bottom-right-radius: 15px;
             background-color: #99E2D0;
             @include flex-center;
-            
+
 
             i {
                 display: block;
